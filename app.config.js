@@ -16,14 +16,12 @@ export default function AppConfig($routeProvider, $locationProvider) {
         template: homeTemplate,
         controller: HomeRouteController
     })
-    // .otherwise({redirectTo: '/auth'});
+    .otherwise({redirectTo: '/auth'});
     // $locationProvider.html5Mode({
     //     enabled: true,
     //     requireBase: false
     // });
-    // $locationProvider
-    //   .html5Mode(true)
-    //   .hashPrefix('!');
+    $locationProvider.html5Mode(true);
 
 };
 

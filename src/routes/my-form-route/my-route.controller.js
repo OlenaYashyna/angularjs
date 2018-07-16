@@ -1,8 +1,6 @@
 export default class MyRouteController {
-    constructor($scope, $route, $routeParams, $location) {
-        $scope.$route = $route;
-        $scope.$location = $location;
-        $scope.$routeParams = $routeParams;
+    constructor($scope) {
+        
         $scope.formData = {
             login : 'Your Name',
             password: 'Your Password'
@@ -15,9 +13,9 @@ export default class MyRouteController {
             localStorage.setItem("myKey", userData);
             //$scope.showForm = false;
             if($scope.formData.login !== '' && $scope.formData.password !== '') {
-                //$window.location.path = '/home';
-                //$location.path('/home');
-                
+                $window.location.path = '/home';
+                //const a = $location.hash();
+                             
                 console.log($scope.formData);
             } else {console.log('nothing to view');}
         };

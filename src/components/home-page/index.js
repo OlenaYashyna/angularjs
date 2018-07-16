@@ -5,6 +5,7 @@ export default {
     template: HomePageTemplate,
     controller: HomePageCtrl,
     bindings: {
-        
+      handleAdd: '=',
+      todos: '='  
     },
 }

@@ -1,1 +1,22 @@
-<div>THIS DASHBOARD</div>
+<form ng-submit="$ctrl.addTodo()">
+        <div class="form-group">
+          <label for="ToDo"></label>
+          <input type="text" placeholder="Enter your task" ng-model="$ctrl.todoItem">
+          <button type="submit">ADD</button>
+        </div>
+        <div class="form-group">
+          <span>Priority</span>
+          <select class="form-control" ng-model="$ctrl.priority">
+            <option>*</option>
+            <option>**</option>
+            <option>***</option>
+          </select>
+        </div>
+    </form>
+    <h3 class="todo-block">TASKS:</h3>
+    <ul>
+      <li ng-repeat="todo in $ctrl.todos">{{todo}}</li>
+    </ul>
+
+
+
